@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file for styling -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .wrapper {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 300px;
+        }
+        .title {
+            font-size: 1.9rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .field {
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        .field input {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .field label {
+            position: absolute;
+            top: 0.5rem;
+            left: 0.75rem;
+            font-size: 0.875rem;
+            color: #666;
+            transition: 0.2s;
+        }
+        .field input:focus + label,
+        .field input:not(:placeholder-shown) + label {
+            top: -0.75rem;
+            left: 0.75rem;
+            font-size: 0.75rem;
+            color: #007BFF;
+        }
+        .field input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .field input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .signup-link {
+            text-align: center;
+            margin-top: 1rem;
+        }
+        .pass-link {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title">Login</div>
+        <form id="loginForm" onsubmit="return handleLogin(event)">
+            <div class="field">
+                <input type="email" id="loginEmail" required>
+                <label for="loginEmail">Email Address</label>
+            </div>
+            <div class="field">
+                <input type="password" id="loginPassword" required>
+                <label for="loginPassword">Password</label>
+            </div>
+            <div class="field content">
+                <div class="checkbox">
+                    <input type="checkbox" id="rememberMe">
+                    <label for="rememberMe">Remember Me</label>
+                </div>
+                <a href="#" class="pass-link">Forgot Password?</a>
+            </div>
+            <div class="field">
+                <input type="submit" value="Login">
+            </div>
+            <div class="signup-link">
+                Not a member? <a href="signup.html">Signup now</a>
+            </div>
+        </form>
+    </div>
+    <script>
+        function handleLogin(event) {
+            event.preventDefault(); // Prevent form from submitting traditionally
+
+            // Get form data
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+
+            if (email && password) {
+                // Simulate successful login and store a flag in localStorage
+                localStorage.setItem('isLoggedIn', 'true');
+                // Redirect to the patient details page
+                window.location.href = 'patient.html';
+            } else {
+                alert('Please enter both email and password.');
+            }
+        }
+    </script>
+</body>
+</html>
