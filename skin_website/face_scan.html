@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Scanning</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title">
+            Face Scanning
+        </div>
+        <div class="content">
+            <video id="video" width="640" height="480" autoplay></video>
+            <button id="captureButton">Capture Image</button>
+            <canvas id="canvas" width="640" height="480" style="display: none;"></canvas>
+            <div id="result"></div>
+        </div>
+        <script src="face-scanning.js"></script>
+    </div>
+</body>
+</html>
