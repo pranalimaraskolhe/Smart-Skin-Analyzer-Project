@@ -4,3 +4,5 @@ A Raspberry Pi 3 device called a "smart skin analyser" uses a camera as a sensor
 ### The data set is taken from the website : <b>Kaggle</b>
 
 ### Website : https://smart-skin-website-github-io.vercel.app/login.html
+
+https://github.com/pranalimaraskolhe/Smart-Skin-Analyzer-Project/issues/1#issue-2487391829
