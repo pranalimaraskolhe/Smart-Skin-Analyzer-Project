@@ -12,4 +12,7 @@ A Raspberry Pi 3 device called a "smart skin analyser" uses a camera as a sensor
 # Rpi with attached camera module
 ![rpi_camera](https://github.com/user-attachments/assets/e1a01d3a-750a-4d12-a9d9-e1841856a4ba)
 
+![connect-camera](https://github.com/user-attachments/assets/f409f794-cd36-4000-aabe-28de2fafab17)
+
+
 
